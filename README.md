@@ -1,2 +1,37 @@
 # BASIC
 Yet another BASIC implementation
+
+See the discord [Z80-Retro! BASIC thread](https://discord.com/channels/1010951092277874791/1427916714548527176)
+
+# Minimal must-have list for an proof of concept/alpha release (very likely to change)
+
+- support line-number style (unstructured)
+- list files and save and load files
+- peek / poke
+- ability to delete multiple lines
+- support for variables with longer names. Up to 8 chars?
+- values in decimal and hex with ability to print in hex too. 
+- DATA and READ (uses an auto increment pointer good for loading graphics etc)
+- save in text/untokenised format
+- IN and OUT for IO access
+- Page at a time listing
+
+Nice to have:
+
+- support structured style BASIC
+- save in tokenized and untokenised formats. 
+- ideally some form of inline editor.  Shouldn't have to retype the whole line every time I want to make an edit 
+- graphics primitives and MODE to set the graphics mode
+- some form of editor. Especially if doing structured basic
+- baked in xmodem or other for pulling files over serial.
+
+# Other Implementations For Inspiration
+
+- https://github.com/nanochess/CVBasic
+- https://www.bbcbasic.co.uk/bbcbasic/z80basic.html
+- https://github.com/paulscottrobson/neo6502-firmware
+- bbcbasic.  It supports inline assembly.
+- cvbasic.  Not native. It compiles down to assembly and is meant for cross compiling.the neo6502 platform has a version of basic that runs natively but and has structured programming.
+
+After apple basic on the apple 3 I used qbasic on my dos PC.  It had a cursed type interface and supported functions and sub / end sub routines.  Structured.  The thing had a full blown manual inside it making it easy to learn.
+I love the idea of a retro-basic.  If it's in the other rom bank,  The only hard to replicate thing is the filesystem. Serial is easy.  The graphics features are already something that we do without ROM or CPM support.
