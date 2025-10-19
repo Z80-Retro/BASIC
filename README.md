@@ -27,7 +27,9 @@ Nice to have:
 
 # Other Implementations For Inspiration
 
-- https://github.com/jorgicor/bas55 (ECMA 55 minimal BASIC, implemented using yacc)
+- https://jorgicor.niobe.org/bas55/
+  - https://github.com/jorgicor/bas55 (ECMA 55 minimal BASIC, implemented using yacc)
+  - https://buraphakit.sourceforge.io/BASIC.shtml
 - https://github.com/nanochess/CVBasic
 - https://www.bbcbasic.co.uk/bbcbasic/z80basic.html
 - https://github.com/paulscottrobson/neo6502-firmware
@@ -41,5 +43,7 @@ I love the idea of a retro-basic.  If it's in the other rom bank,  The only hard
 
 - https://en.wikipedia.org/wiki/Full_BASIC
   - [ECMA 116: Full BASIC](https://web.archive.org/web/20111014140105/http://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/ECMA-116,%201st%20edition,%20June%201986.pdf) (withdrawn?)
-  - [ECMA 55: Minimal BASIC](https://www.ecma-international.org/wp-content/uploads/ECMA-55_1st_edition_january_1978.pdf)
   - [ANSI X3.113-1987: Full BASIC](https://archive.org/details/federalinformat6821nati_0)
+- https://en.wikipedia.org/wiki/Minimal_BASIC
+  - [ECMA 55: Minimal BASIC](https://www.ecma-international.org/wp-content/uploads/ECMA-55_1st_edition_january_1978.pdf)
+  - [An ASCII version of ECMA 55](https://buraphakit.sourceforge.io/ECMA-55.TXT)
