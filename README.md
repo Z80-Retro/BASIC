@@ -35,3 +35,10 @@ Nice to have:
 
 After apple basic on the apple 3 I used qbasic on my dos PC.  It had a cursed type interface and supported functions and sub / end sub routines.  Structured.  The thing had a full blown manual inside it making it easy to learn.
 I love the idea of a retro-basic.  If it's in the other rom bank,  The only hard to replicate thing is the filesystem. Serial is easy.  The graphics features are already something that we do without ROM or CPM support.
+
+# Links to Useful DOCs
+
+- https://en.wikipedia.org/wiki/Full_BASIC
+  - [ECMA 116: Full BASIC](https://web.archive.org/web/20111014140105/http://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/ECMA-116,%201st%20edition,%20June%201986.pdf) (withdrawn?)
+  - [ECMA 55: Minimal BASIC](https://www.ecma-international.org/wp-content/uploads/ECMA-55_1st_edition_january_1978.pdf)
+  - [ANSI X3.113-1987: Full BASIC](https://archive.org/details/federalinformat6821nati_0)
