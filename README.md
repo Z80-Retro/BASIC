@@ -27,6 +27,7 @@ Nice to have:
 
 # Other Implementations For Inspiration
 
+- https://github.com/jorgicor/bas55 (ECMA 55 minimal BASIC, implemented using yacc)
 - https://github.com/nanochess/CVBasic
 - https://www.bbcbasic.co.uk/bbcbasic/z80basic.html
 - https://github.com/paulscottrobson/neo6502-firmware
