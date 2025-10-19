@@ -27,7 +27,7 @@ Nice to have:
 
 # Other Implementations For Inspiration
 
-- https://jorgicor.niobe.org/bas55/
+- https://jorgicor.niobe.org/bas55/ (This includes a note: The ECMA-55 standard was chosen over the "ANSI X3.60-1978 minimal BASIC" standard since it is free.)
   - https://github.com/jorgicor/bas55 (ECMA 55 minimal BASIC, implemented using yacc)
   - https://buraphakit.sourceforge.io/BASIC.shtml
 - https://github.com/nanochess/CVBasic
