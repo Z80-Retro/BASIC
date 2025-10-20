@@ -48,3 +48,8 @@ I love the idea of a retro-basic.  If it's in the other rom bank,  The only hard
 - https://en.wikipedia.org/wiki/Minimal_BASIC
   - [ECMA 55: Minimal BASIC](https://www.ecma-international.org/wp-content/uploads/ECMA-55_1st_edition_january_1978.pdf)
   - [An ASCII version of ECMA 55](https://buraphakit.sourceforge.io/ECMA-55.TXT)
+ 
+# Manuals
+
+- [BASIC-80_Reference_Manual_VT180_V5.21_1981](http://www.bitsavers.org/pdf/dec/terminal/vt180/AA-P226A-TV_BASIC-80_Reference_Manual_VT180_V5.21_1981.pdf)
+- [Getting_Started_With_MBASIC_VT180_V5.21_1981](http://www.bitsavers.org/pdf/dec/terminal/vt180/AA-P225A-TV_Getting_Started_With_MBASIC_VT180_V5.21_1981.pdf)
