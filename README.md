@@ -23,7 +23,7 @@ Nice to have:
 - ideally some form of inline editor.  Shouldn't have to retype the whole line every time I want to make an edit 
 - graphics primitives and MODE to set the graphics mode
 - some form of editor. Especially if doing structured basic
-- baked in xmodem or other for pulling files over serial.
+- baked in xmodem or other for pulling files over serial (maybe add `xload` and `xsave` commands that can do this?)
 
 # Other Implementations For Inspiration
 
