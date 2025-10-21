@@ -1,203 +1,203 @@
 # Extracted from ECMA-55 with some whitespace cleanup
 
 
-letter						= A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/V/W/X/Y/Z
+letter                      = A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/V/W/X/Y/Z
 
-digit						= 0/1/2/3/4/5/6/7/8/9
+digit                       = 0/1/2/3/4/5/6/7/8/9
 
-string-character 		  	= quotation-mark / quoted-string-character
+string-character            = quotation-mark / quoted-string-character
 
-quoted-string-character   	= exclamation-mark / number-sign / dollar-sign / percent-sign / ampersand /
-                            	apostrophe / left-parenthesis / right-parenthesis / asterisk / comma / solidus /
-                            	colon / semi-colon / less-than-sign / equals-sign / greater-than-sign /
-                            	question-mark / circumflex-accent / underline / unquoted-string-character
+quoted-string-character     = exclamation-mark / number-sign / dollar-sign / percent-sign / ampersand /
+                                apostrophe / left-parenthesis / right-parenthesis / asterisk / comma / solidus /
+                                colon / semi-colon / less-than-sign / equals-sign / greater-than-sign /
+                                question-mark / circumflex-accent / underline / unquoted-string-character
 
-unquoted-string-character	= space / plain-string-character
+unquoted-string-character   = space / plain-string-character
 
-plain-string-character    	= plus-sign / minus-sign / full-stop / digit / letter
+plain-string-character      = plus-sign / minus-sign / full-stop / digit / letter
 
-remark-string    			= string-character*
+remark-string               = string-character*
 
-quoted-string    			= quotation-mark quoted-string-character* quotation-mark
+quoted-string               = quotation-mark quoted-string-character* quotation-mark
 
-unquoted-string  			= plain-string-character /
-                            	plain-string-character unquoted-string-character* plain-string-character
+unquoted-string             = plain-string-character /
+                                plain-string-character unquoted-string-character* plain-string-character
 
-program          			= block* end-line
+program                     = block* end-line
 
-block            			= (line/for-block)*
+block                       = (line/for-block)*
 
-line             			= line-number statement end-of-line
+line                        = line-number statement end-of-line
 
-line-number      			= digit digit? digit? digit?
+line-number                 = digit digit? digit? digit?
 
-end-of-line      			= [implementation defined]
+end-of-line                 = [implementation defined]
 
-end-line         			= line-number end-statement end-of-line
+end-line                    = line-number end-statement end-of-line
 
-end-statement    			= END
+end-statement               = END
 
-statement        			= data-statement / def-statement / dimension -statement / gosub-statement /
-                             	goto-statement / if-then-statement / input-statement / let-statement /
-                             	on-goto-statement / option-statement / print-statement / randomize-statement /
-                             	read-statement / remark-statement / restore-statement / return-statement /
-                             	stop statement
+statement                   = data-statement / def-statement / dimension -statement / gosub-statement /
+                                goto-statement / if-then-statement / input-statement / let-statement /
+                                on-goto-statement / option-statement / print-statement / randomize-statement /
+                                read-statement / remark-statement / restore-statement / return-statement /
+                                stop statement
 
-numeric-constant  			= sign? numeric-rep
+numeric-constant            = sign? numeric-rep
 
-sign              			= plus-sign / minus-sign
+sign                        = plus-sign / minus-sign
 
-numeric-rep       			= significand exrad?
+numeric-rep                 = significand exrad?
 
-significand       			= integer full-stop? / integer? fraction
+significand                 = integer full-stop? / integer? fraction
 
-integer           			= digit digit*
+integer                     = digit digit*
 
-fraction          			= full-stop digit digit*
+fraction                    = full-stop digit digit*
 
-exrad             			= E sign? integer
+exrad                       = E sign? integer
 
-string-constant   			= quoted-string
+string-constant             = quoted-string
 
-variable               		= numeric-variable / string-variable
+variable                    = numeric-variable / string-variable
 
-numeric-variable       		= simple-numeric-variable / numeric-array-element
+numeric-variable            = simple-numeric-variable / numeric-array-element
 
 simple-numeric-variable     = letter digit?
 
-numeric-array-element  		= numeric-array-name subscript
+numeric-array-element       = numeric-array-name subscript
 
-numeric-array-name     		= letter
+numeric-array-name          = letter
 
-subscript              		= left-parenthesis numeric-expression (comma numeric-expression)? right-parenthesis
+subscript                   = left-parenthesis numeric-expression (comma numeric-expression)? right-parenthesis
 
-string-variable        		= letter dollar-sign
+string-variable             = letter dollar-sign
 
-expression         			= numeric-expression / string-expression
+expression                  = numeric-expression / string-expression
 
-numeric-expression 			= sign? term (sign term)*
+numeric-expression          = sign? term (sign term)*
 
-term               			= factor (multiplier factor)*
+term                        = factor (multiplier factor)*
 
-factor             			= primary (circumflex-accent primary)*
+factor                      = primary (circumflex-accent primary)*
 
-multiplier         			= asterisk / solidus
+multiplier                  = asterisk / solidus
 
-primary            			= numeric-variable / numeric-rep / numeric-function-ref / 
-								left-parenthesis numeric-expression right-parenthesis
+primary                     = numeric-variable / numeric-rep / numeric-function-ref / 
+                                left-parenthesis numeric-expression right-parenthesis
 
-numeric-function-ref  		= numeric-function-name argument-list?
+numeric-function-ref        = numeric-function-name argument-list?
 
-numeric-function-name  		= numeric-defined-function / numeric-supplied-function
+numeric-function-name       = numeric-defined-function / numeric-supplied-function
 
-argument-list      			= left-parenthesis argument right-parenthesis
+argument-list               = left-parenthesis argument right-parenthesis
 
-argument           			= string-expression
+argument                    = string-expression
 
-string-expression  			= string-variable / string-constant
+string-expression           = string-variable / string-constant
 
-numeric-supplied-function 	= ABS / ATN / COS / EXP / INT / LOG / RND / SGN / SIN / SQR / TAN
+numeric-supplied-function   = ABS / ATN / COS / EXP / INT / LOG / RND / SGN / SIN / SQR / TAN
 
-def-statement      			= DEF numeric-defined-function parameter-list? equals-sign numeric-expression
+def-statement               = DEF numeric-defined-function parameter-list? equals-sign numeric-expression
 
 numeric-defined-function    = FN letter
 
-parameter-list     			= left-parenthesis parameter right-parenthesis
+parameter-list              = left-parenthesis parameter right-parenthesis
 
-parameter          			= simple-numeric-variable
+parameter                   = simple-numeric-variable
 
-let-statement           	= numeric-let-statement / string-let-statement
+let-statement               = numeric-let-statement / string-let-statement
 
-numeric-let-statement   	= LET numeric-variable equals-sign numeric-expression
+numeric-let-statement       = LET numeric-variable equals-sign numeric-expression
 
-string-let-statement    	= LET string-variable equals-sign string-expression
+string-let-statement        = LET string-variable equals-sign string-expression
 
-goto-statement           	= GO space* TO line-number
+goto-statement              = GO space* TO line-number
 
-if-then-statement        	= IF relational-expression THEN line-number
+if-then-statement           = IF relational-expression THEN line-number
 
-relational-expression    	= numeric-expression relation numeric-expression / 
-								string-expression equality-relation string-expression
+relational-expression       = numeric-expression relation numeric-expression / 
+                                string-expression equality-relation string-expression
 
-relation                 	= equality-relation / less-than-sign / 
-								greater-than-sign / not-less / not-greater
+relation                    = equality-relation / less-than-sign / 
+                                greater-than-sign / not-less / not-greater
 
-equality-relation        	= equals-sign / not-equals
+equality-relation           = equals-sign / not-equals
 
-not-less                 	= greater-than-sign equals-sign
+not-less                    = greater-than-sign equals-sign
 
-not-greater              	= less-than-sign equals-sign
+not-greater                 = less-than-sign equals-sign
 
-not-equals               	= less-than-sign  greater-than-sign
+not-equals                  = less-than-sign  greater-than-sign
 
-gosub-statement          	= GO space* SUB line-number
+gosub-statement             = GO space* SUB line-number
 
-return-statement         	= RETURN
+return-statement            = RETURN
 
-on-goto-statement        	= ON numeric-expression GO space* TO line-number (comma line-number)*
+on-goto-statement           = ON numeric-expression GO space* TO line-number (comma line-number)*
 
-stop-statement           	= STOP
+stop-statement              = STOP
 
-for-block                	= for-line for-body
+for-block                   = for-line for-body
 
-for-body                 	= block next-line
+for-body                    = block next-line
 
-for-line                 	= line-number for-statement end-of-line
+for-line                    = line-number for-statement end-of-line
 
-next-line                	= line-number next-statement end-of-line
+next-line                   = line-number next-statement end-of-line
 
-for-statement            	= FOR control-variable equals-sign initial-value TO limit (STEP increment)?
+for-statement               = FOR control-variable equals-sign initial-value TO limit (STEP increment)?
 
-control-variable         	= simple-numeric-variable
+control-variable            = simple-numeric-variable
 
-initial-value            	= numeric-expression
+initial-value               = numeric-expression
 
-limit                    	= numeric-expression
+limit                       = numeric-expression
 
-increment                	= numeric-expression
+increment                   = numeric-expression
 
-next-statement           	= NEXT control-variable
+next-statement              = NEXT control-variable
 
-print-statement       		= PRINT print-list?
+print-statement             = PRINT print-list?
 
-print-list            		= (print-item? print-separator)* print_item?
+print-list                  = (print-item? print-separator)* print_item?
 
-print-item            		= expression / tab-call
+print-item                  = expression / tab-call
 
-tab-call              		= TAB left-parenthesis numeric-expres-sion right-parenthesis
+tab-call                    = TAB left-parenthesis numeric-expres-sion right-parenthesis
 
-print-separator       		= comma / semicolon
+print-separator             = comma / semicolon
 
-input-statement       		= INPUT variable-list
+input-statement             = INPUT variable-list
 
-variable-list         		= variable (comma variable)*
+variable-list               = variable (comma variable)*
 
-input-prompt          		= [implementation defined]
+input-prompt                = [implementation defined]
 
-input-reply           		= input-list end-of-line
+input-reply                 = input-list end-of-line
 
-input-list            		= padded-datum (comma padded-datum)*
+input-list                  = padded-datum (comma padded-datum)*
 
-padded-datum          		= space* datum space*
+padded-datum                = space* datum space*
 
-datum                 		= quoted-string / unquoted-string
+datum                       = quoted-string / unquoted-string
 
-read-statement        		= READ variable-list
+read-statement              = READ variable-list
 
-restore-statement     		= RESTORE
+restore-statement           = RESTORE
 
-data-statement        		= DATA data-list
+data-statement              = DATA data-list
 
-data-list             		= datum (comma datum)*
+data-list                   = datum (comma datum)*
 
-dimension-statement   		= DIM array declaration (comma array-declaration)*
+dimension-statement         = DIM array declaration (comma array-declaration)*
 
-array-declaration     		= numeric-array-name left-parenthesis bounds right-parenthesis
+array-declaration           = numeric-array-name left-parenthesis bounds right-parenthesis
 
-bounds                		= integer (comma integer)?
+bounds                      = integer (comma integer)?
 
-option-statement      		= OPTION BASE (0/1)
+option-statement            = OPTION BASE (0/1)
 
-remark-statement      		= rem remark-string
+remark-statement            = rem remark-string
 
-randomize-statement   		= RANDOMIZE
+randomize-statement         = RANDOMIZE
