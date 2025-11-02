@@ -46,8 +46,8 @@ I love the idea of a retro-basic.  If it's in the other rom bank,  The only hard
   - [ANSI X3.113-1987: Full BASIC](https://archive.org/details/federalinformat6821nati_0)
   - [ANSI X3.124-1985: Graphical Kernel System (GKS) functional description](https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub120-1.pdf)
 - https://en.wikipedia.org/wiki/Minimal_BASIC
-  - [ECMA 55: Minimal BASIC](https://www.ecma-international.org/wp-content/uploads/ECMA-55_1st_edition_january_1978.pdf)
-  - [An ASCII version of ECMA 55](https://buraphakit.sourceforge.io/ECMA-55.TXT)
+  - [ECMA 55: Minimal BASIC (pdf)](https://www.ecma-international.org/wp-content/uploads/ECMA-55_1st_edition_january_1978.pdf)
+  - [ECMA 55: Minimal BASIC (txt)](https://buraphakit.sourceforge.io/ECMA-55.TXT)
  
 # Manuals
 
