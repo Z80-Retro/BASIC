@@ -1,9 +1,11 @@
 # Building BBC BASIC for the Retro/Nouveau
 
 One way to build BBC BASIC on the Retro (or Nouveau) is to use the SLR Z80ASM compiler on CP/M 
-(not the Linux package of the same name, not the one that comes with z88dk) using the following commands:
+(not the Linux package of the same name, not the one that comes with z88dk.)
 
-Assuming you have the SLR assembler & linker on drive a:
+First grab the source from [Z80-Retro/BBCZ80](https://github.com/Z80-Retro/BBCZ80/tree/master/src) and copy it to a drive on your Retro or Nouveau.
+
+Assuming you copied the source files (they all end in .Z80) to, say, drive G and have the SLR assembler & linker on drive A:
 
 ```
 a:z80asm dist/rmf,main/rmf,exec/rmf,eval/rmf,asmb/rmf,cmos/rmf,math/rmf,hook/rmf,data/rmf
@@ -11,18 +13,18 @@ a:slrnk /V,BBC/N,/A:0100,dist,/P:0200,main,exec,eval,asmb,math,hook,cmos,/P:4B00
 ```
 
 This will create a BBC.COM file as well as various listings and object files.  
-For example, I compiled it on drive G and the directory noe looks like this: 
+For example, after compiling it on drive G, the directory now looks like this: 
 
 ```
 g>dir
 G: MAIN     Z80 : DIST     Z80 : ACORN    Z80 : HOOK     Z80
 G: EXEC     Z80 : CMOS     Z80 : ASMB     Z80 : EVAL     Z80
-G: MATH     Z80 : DATA     Z80 : AMOS     Z80 : DUMP     Z80
-G: DIST     REL : DIST     LST : MAIN     REL : MAIN     LST
-G: EXEC     REL : EXEC     LST : EVAL     REL : EVAL     LST
-G: ASMB     REL : ASMB     LST : CMOS     REL : CMOS     LST
-G: MATH     REL : MATH     LST : HOOK     REL : HOOK     LST
-G: DATA     REL : DATA     LST : BBC      COM
+G: MATH     Z80 : DATA     Z80 : AMOS     Z80 : DIST     REL
+G: DIST     LST : MAIN     REL : MAIN     LST : EXEC     REL
+G: EXEC     LST : EVAL     REL : EVAL     LST : ASMB     REL
+G: ASMB     LST : CMOS     REL : CMOS     LST : MATH     REL
+G: MATH     LST : HOOK     REL : HOOK     LST : DATA     REL
+G: DATA     LST : BBC      COM
 g>
 ```
 
