@@ -1,3 +1,9 @@
+# NOTE
+
+FYI - Soon after starting to look creating a BASIC interpreter, someone pointed out that Richard Russell open-sourced a release of BBC BASIC that can be easily assembled for the Retro.  [I cloned his repo here](https://github.com/Z80-Retro/BBCZ80) and expect to tinker with it for a while and the reassess the idea writing a new version from scratch.
+
+
+
 # BASIC
 Yet another BASIC implementation
 
