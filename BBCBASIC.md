@@ -3,7 +3,25 @@
 One way to build BBC BASIC on the Retro (or Nouveau) is to use the SLR Z80ASM compiler on CP/M 
 (not the Linux package of the same name, not the one that comes with z88dk.)
 
-First grab the source from [Z80-Retro/BBCZ80](https://github.com/Z80-Retro/BBCZ80/tree/master/src) and copy it to a drive on your Retro or Nouveau (or just about any CP/M machine should do.)
+## Get the source files
+
+First grab the source from [Z80-Retro/BBCZ80](https://github.com/Z80-Retro/BBCZ80/tree/master/src) and copy it to a drive on your Retro or Nouveau (or just about any CP/M machine should do.)  I used the following commands on my respberry PI to do this:
+
+```
+git clone https://github.com/Z80-Retro/BBCZ80.git
+cd BBCZ80/src
+unix2dos *.Z80
+zip --compression-method store ~/bbc.zip *
+```
+
+*Note that the `--compression-method store` option on `zip` prevents the archive from getting compressed.  This is wasteful, but the `unzip` on CP/M does not know how to uncompress the (decades old at this point) modern methods that are used today.*
+
+## Copy the files over to your CP/M system
+
+Copy the files over to CP/M using your favorite methiod.  For the full retro experience, use xmodem to transfer the zip file using something like minicom.
+
+
+## Assemble the source
 
 Assuming you copied the source files (they all end in .Z80) to, say, drive G and have the SLR assembler & linker on drive A, run these commands to build it:
 
@@ -11,7 +29,7 @@ Assuming you copied the source files (they all end in .Z80) to, say, drive G and
 a:z80asm dist/rmf,main/rmf,exec/rmf,eval/rmf,asmb/rmf,cmos/rmf,math/rmf,hook/rmf,data/rmf
 a:slrnk /V,BBC/N,/A:0100,dist,/P:0200,main,exec,eval,asmb,math,hook,cmos,/P:4B00,data,/E
 ```
-Note that the assembler may occasionally ask you to press the return key a few times so that it does not scroll off your screen too quickly :-D
+*Note that the assembler may occasionally ask you to 'Hit any key' a few times so that it does not scroll off your screen too quickly :-D*
 
 This will create a BBC.COM file as well as various listings and object files.  
 For example, after compiling it on drive G, the directory now looks like this: 
@@ -29,6 +47,8 @@ G: DATA     LST : BBC      COM
 g>
 ```
 
+## Test it 
+
 Now run it by typing `bbc` like this:
 
 ```
@@ -39,7 +59,7 @@ BBC BASIC (Z80) Version 5.00
 ```
 
 Note that BBC BASIC wants allthe commands and keywords entered in upper case.  
-You will need to type in code like this partially working game I was working on:
+Note the upper case language tokens in this not-yet working demo game I was working on:
 
 ```
   300 REM shut off the cursor
