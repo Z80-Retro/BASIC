@@ -27,7 +27,7 @@ Assuming you copied the source files (they all end in .Z80) to, say, drive G and
 
 ```
 a:z80asm dist/rmf,main/rmf,exec/rmf,eval/rmf,asmb/rmf,cmos/rmf,math/rmf,hook/rmf,data/rmf
-a:slrnk /V,BBC/N,/A:0100,dist,/P:0200,main,exec,eval,asmb,math,hook,cmos,/P:4B00,data,/E
+a:slrnk /V,BBCBASIC/N,/A:0100,dist,/P:0200,main,exec,eval,asmb,math,hook,cmos,/P:4B00,data,/E
 ```
 *Note that the assembler may occasionally ask you to 'Hit any key' a few times so that it does not scroll off your screen too quickly :-D*
 
@@ -43,22 +43,22 @@ G: DIST     LST : MAIN     REL : MAIN     LST : EXEC     REL
 G: EXEC     LST : EVAL     REL : EVAL     LST : ASMB     REL
 G: ASMB     LST : CMOS     REL : CMOS     LST : MATH     REL
 G: MATH     LST : HOOK     REL : HOOK     LST : DATA     REL
-G: DATA     LST : BBC      COM
+G: DATA     LST : BBCBASIC COM
 g>
 ```
 
 ## Test it 
 
-Now run it by typing `bbc` like this:
+Now run it by typing `bbcbasic` like this:
 
 ```
-g>bbc
+g>bbcbasic
 BBC BASIC (Z80) Version 5.00  
 (C) Copyright R.T.Russell 2025
 >      
 ```
 
-Note that BBC BASIC wants allthe commands and keywords entered in upper case.  
+Note that BBC BASIC wants all the commands and keywords entered in upper case.  
 Note the upper case language tokens in this not-yet working demo game I was working on:
 
 ```
