@@ -1,7 +1,7 @@
 # Building BBC BASIC for the Retro/Nouveau
 
 One way to build BBC BASIC on the Retro (or Nouveau) is to use the SLR Z80ASM compiler on CP/M 
-(not the Linux package of the same name, not the one that comes with z88dk.)
+(not the Linux package of the same name, nor the one that comes with z88dk.)
 
 ## Get the source files
 
