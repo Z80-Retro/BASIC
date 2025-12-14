@@ -20,6 +20,12 @@ zip --compression-method store ~/bbc.zip *
 
 Copy the files over to CP/M using your favorite methiod.  For the full retro experience, use xmodem to transfer the zip file using something like minicom.
 
+## Unzip the source files
+
+Assuming you copied the zip file to drive G, run this command to `unzip` the archive:
+```
+a:unzip bbc g:
+```
 
 ## Assemble the source
 
