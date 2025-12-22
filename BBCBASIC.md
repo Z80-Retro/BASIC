@@ -114,3 +114,12 @@ Note the upper case language tokens in this not-yet working demo game I was work
 Then run it by typing `RUN` (not `run`) and list it using `LIST` and so on.
 
 Note that the above game will only work on a VT100/ANSI terminal and expect the screen to be 25x80.
+
+# Useful BBC BASIC Links
+
+- https://en.wikipedia.org/wiki/BBC_BASIC
+- http://www.rtrussell.co.uk/
+- http://www.rtrussell.co.uk/bbcwin/tutorial/index.html
+- https://github.com/rtrussell/BBCZ80
+- https://www.bbcbasic.co.uk/bbcbasic.html
+- https://www.bbcbasic.co.uk/bbcbasic/history.html
