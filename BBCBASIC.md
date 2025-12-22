@@ -65,7 +65,8 @@ BBC BASIC (Z80) Version 5.00
 ```
 
 Note that BBC BASIC wants all the commands and keywords entered in upper case.  
-Note the upper case language tokens in this not-yet working demo game I was working on:
+Note the upper case language tokens in this demo game I wrote.  
+(Use the `,` and `.` keys to move left and right to avoid the asteroids!)
 
 ```
   300 REM shut off the cursor
@@ -88,19 +89,17 @@ Note the upper case language tokens in this not-yet working demo game I was work
   470 IF I$="," AND PLAYER%>LMAX% THEN PLAYER%=PLAYER%-1
   480 IF I$="." AND PLAYER%<RMAX% THEN PLAYER%=PLAYER%+1
   490 IF I$="q" THEN 690
-  500 GOSUB 610
+  500 GOSUB  620
   510 REM add a new asteroid to the screen
   520 SCORE%=SCORE%+1
   530 FOR I%=1 TO ROWS%-1: PFIFO%(I%-1) = PFIFO%(I%): NEXT
   540 PFIFO%(ROWS%-1) = INT(RND(RMAX%+1))
-  550 X$=STR$(PFIFO%(ROWS%-1))
-  560 PRINT CHR$(&1B);"[24;";MID$(X$,2,LEN(X$)-1);"H";"*";
+  560 PRINT CHR$(&1B);"[24;";PFIFO%(ROWS%-1);"H";"*";
   570 REM uncomment the following line to slow down the game
-  580 FOR I%=0 TO 1000 : NEXT
+  580 REM FOR I%=0 TO 1000 : NEXT
   590 GOTO 440
   600 REM print the player's ship
-  610 X$=STR$(PLAYER%-1)
-  620 PRINT CHR$(&1B);"[1;";MID$(X$,2,LEN(X$)-1);"H";SHIP$
+  620 PRINT CHR$(&1B);"[1;";PLAYER%-1;"H";SHIP$
   630 RETURN
   640 REM turn cursor back on
   650 PRINT CHR$(&1B);"[4;1H";"BOOM!"
